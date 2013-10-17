@@ -2,6 +2,8 @@
 
 The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme, based on [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/) by [Noah Frederick](http://noahfrederick.com/).
 
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/terminal.png "Piperita")
+
 Terminals available for
 * Terminal.app (OS X Default)
 * [iTerm 2](http://www.iterm2.com/)
