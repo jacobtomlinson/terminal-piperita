@@ -1,6 +1,6 @@
 
 
-### Piperita Theme ###
+### Start Piperita Theme ###
 
 # Aliases to make ls easier to use in different modes, taken from Red Hat
 alias ls='ls -GFh'
@@ -19,4 +19,4 @@ export COLOR_DEFAULT="\[\e[0m\]"
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\W\`if [ \$? = 0 ]; then echo -e '\[\e[01;m\]\$'; else echo -e '\[\e[31m\]\$'; fi\` \[\033[m\]"
 export CLICOLOR=1
 
-#######################
+### End Piperita Theme ###
