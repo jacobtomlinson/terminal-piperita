@@ -1,6 +1,8 @@
 
 
 ### Start Piperita Theme ###
+# Theme by Jacob Tomlinson
+# https://github.com/killfall/terminal-piperita
 
 # Aliases to make ls easier to use in different modes, taken from Red Hat
 alias ls='ls -GFh'
