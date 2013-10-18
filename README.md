@@ -47,7 +47,7 @@ cat .profile >> ~/.profile
 
 This will append your .profile if it exists or create it if it doesn't.
 
-###What does .profile do?
+__What does .profile do__
 
 So you may be asking what your `.profile` does. Well your `.profile`, along with other files such as `.bashrc` and `.bash_profile` depending on your operating system, are scripts which are run when you open a terminal or tty. They are used to define some variables and aliases to make life easier without having to define them every time.
 
