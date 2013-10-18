@@ -4,6 +4,12 @@ The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-them
 
 ![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/terminal.png "Piperita")
 
+__Features__
+* Soft colour scheme by Noah Frederick
+* Prompt separated by colours
+* User identifier changes colour depending on command return code
+* Username changes colour based on whether superuser or not
+
 Themes are available for
 * Terminal.app (OS X Default)
 * [iTerm 2](http://www.iterm2.com/)
@@ -40,6 +46,8 @@ cat .profile >> ~/.profile
 ```
 
 This will append your .profile if it exists or create it if it doesn't.
+
+###What does .profile do?
 
 So you may be asking what your `.profile` does. Well your `.profile`, along with other files such as `.bashrc` and `.bash_profile` depending on your operating system, are scripts which are run when you open a terminal or tty. They are used to define some variables and aliases to make life easier without having to define them every time.
 
