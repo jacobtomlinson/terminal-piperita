@@ -47,11 +47,11 @@ cat .profile >> ~/.profile
 
 This will append your .profile if it exists or create it if it doesn't.
 
-__What does .profile do__
+__What does .profile do?__
 
 So you may be asking what your `.profile` does. Well your `.profile`, along with other files such as `.bashrc` and `.bash_profile` depending on your operating system, are scripts which are run when you open a terminal or tty. They are used to define some variables and aliases to make life easier without having to define them every time.
 
-If you have a look at the `.profile` included in this theme you will see some aliases to ls, the first being ls itself but with a couple of options which tells it to use color mode. There are more aliases for `ls` such as `ll` or la which are just shortcuts for `ls -l` and `ls -la` respectively. There are also some variables set which define colors to be used.
+If you have a look at the `.profile` included in this theme you will see some aliases to ls, the first being ls itself but with a couple of options which tells it to use color mode. There are more aliases for `ls` such as `ll` or `la` which are just shortcuts for `ls -l` and `ls -la` respectively. There are also some variables set which define colors to be used.
 
 The main part of this `.profile` which defines the theme is the definition of the variable `PS1` which is the format and colors for the prompt itself. The two main things which adds functionality are the if statements which change colors in the prompt based on what is happening. One checks to see if the pervious command failed and if so it changes the prompt's last character (usually a $) to be red. The other checks to see if the user is root, you really should avoid using the root user as it has a lot of power and you can easily mess things up, however sometimes you need to use the root user so the prompt changes the username to red if you're root just to make you extra aware you're in a risky position.
 
