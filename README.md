@@ -57,6 +57,13 @@ The main part of this `.profile` which defines the theme is the definition of th
 
 ![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/rootprompt.png "Root Prompt")
 
+###3. Vim Profile (Optional)
+I've also included a vim profie `.vimrc`. This is just a config file to set some default behaviour for the command line text editor vim. Currently this just tells vim to use syntax highlighting. You may install it with the command.
+
+```
+cat .vimrc >> ~/.vimrc
+```
+
 ##Uninstallation
 
 To remove Piperita first navigate to Preferences in the terminal application and remove the theme using the minus button. Then edit your `.profile` and remove the block starting `### Start Piperita Theme ###` and ending `### End Piperita Theme ###`.
