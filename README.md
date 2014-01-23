@@ -9,6 +9,7 @@ __Features__
 * Prompt separated by colours
 * User identifier changes colour depending on command return code
 * Username changes colour based on whether superuser or not
+* Displays current branch and status when in a git controlled directory
 
 Themes are available for
 * Terminal.app (OS X Default)
