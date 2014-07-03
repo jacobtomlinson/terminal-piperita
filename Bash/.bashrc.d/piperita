@@ -16,13 +16,18 @@ alias grep="grep --color=auto"
 # Environment variables to set prompt format and color
 export COLOR_BOLD="\[\e[1m\]"
 export COLOR_DEFAULT="\[\e[0m\]"
+export COLOR_WHITE="\[\033[m\]"
+export COLOR_GREEN="\[\033[32m\]"
+export COLOR_YELLOW="\[\033[33;1m\]"
+export COLOR_RED="\[\e[31m\]"
+export COLOR_BLUE="\[\033[36m\]"
 
 # Test if user is root and set user color appropriately
 if [[ $(id -u) == 0 ]]
 then
-    export PS1USERCOLOR="\[\033[31m\]"
+    export PS1USERCOLOR=$COLOR_RED
 else
-    export PS1USERCOLOR="\[\033[36m\]"
+    export PS1USERCOLOR=$COLOR_BLUE
 fi
 
 # get current branch in git repo
@@ -72,7 +77,7 @@ function parse_git_dirty {
         fi
 }
 
-export PS1="$PS1USERCOLOR\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\W\`if type parse_git_branch > /dev/null 2>&1; then parse_git_branch; fi\`\`if [ \$? = 0 ]; then echo -e '\[\033[m\]\$'; else echo -e '\[\e[31m\]\$'; fi\` \[\033[m\]"
+export PS1="$PS1USERCOLOR\u$COLOR_WHITE@$COLOR_GREEN\h$COLOR_WHITE:$COLOR_YELLOW\W\`if type parse_git_branch > /dev/null 2>&1; then parse_git_branch; fi\`\`if [ \$? = 0 ]; then echo -e '$COLOR_WHITE'; else echo -e '$COLOR_RED]'; fi\`\$ $COLOR_WHITE"
 
 export CLICOLOR=1
 
