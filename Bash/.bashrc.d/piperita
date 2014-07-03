@@ -2,17 +2,6 @@
 # Theme by Jacob Tomlinson
 # https://github.com/killfall/terminal-piperita
 
-# Aliases to make ls easier to use in different modes, taken from Red Hat EL 6
-alias ls='ls -GFh'
-alias ll="ls -ll"
-alias la="ll -a"
-
-# Set ls colours
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
-# Alias to set color in grep
-alias grep="grep --color=auto"
-
 # Environment variables to set prompt format and color
 export COLOR_BOLD="\[\e[1m\]"
 export COLOR_DEFAULT="\[\e[0m\]"
@@ -36,7 +25,7 @@ function parse_git_branch() {
         if [ ! "${BRANCH}" == "" ]
         then
                 STAT=$(parse_git_dirty)
-                echo " [${BRANCH}${STAT}]"
+                echo -e " [${BRANCH}${STAT}]"
         else
                 echo ""
         fi
@@ -77,7 +66,15 @@ function parse_git_dirty {
         fi
 }
 
-export PS1="$PS1USERCOLOR\u$COLOR_WHITE@$COLOR_GREEN\h$COLOR_WHITE:$COLOR_YELLOW\W\`if type parse_git_branch > /dev/null 2>&1; then parse_git_branch; fi\`\`if [ \$? = 0 ]; then echo -e '$COLOR_WHITE'; else echo -e '$COLOR_RED]'; fi\`\$ $COLOR_WHITE"
+export PS1="\
+$PS1USERCOLOR\u\
+$COLOR_WHITE@\
+$COLOR_GREEN\h\
+$COLOR_WHITE:\
+$COLOR_YELLOW\W\
+\`if [ \$? = 0 ]; then echo -e '$COLOR_WHITE'; else echo -e '$COLOR_RED'; fi\`\
+\`if type parse_git_branch > /dev/null 2>&1; then parse_git_branch; fi\`\
+\$ $COLOR_WHITE"
 
 export CLICOLOR=1
 

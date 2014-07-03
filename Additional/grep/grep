@@ -1,0 +1,8 @@
+### Piperita Theme ###
+# Theme by Jacob Tomlinson
+# https://github.com/killfall/terminal-piperita
+
+# Alias to set color in grep
+alias grep="grep --color=auto"
+
+### End Piperita Theme ###
