@@ -77,7 +77,7 @@ cp Bash/.bashrc ~/.
 
 ###3. Additional Profiles (Optional)
 I've also included profiles I use for additional applications. Each config file will be in a subfolder within `Additional` and will have an `INSTALL.md` file explaining what to do with it.
-However most will just require you to copy the config file into your home directory.
+However most will just require you to copy the config file into your home directory or into `.bashrc.d`.
 
 #### Example - vim
 ```bash
