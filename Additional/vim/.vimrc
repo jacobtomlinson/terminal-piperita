@@ -1,4 +1,4 @@
-" ## Start Piperita Theme ##
+" ## Piperita Theme ##
 " Theme by Jacob Tomlinson
 " https://github.com/killfall/terminal-piperita
 

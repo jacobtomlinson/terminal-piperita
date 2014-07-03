@@ -1,6 +1,4 @@
-
-
-### Start Piperita Theme ###
+### Piperita Theme ###
 # Theme by Jacob Tomlinson
 # https://github.com/killfall/terminal-piperita
 
@@ -9,13 +7,13 @@ alias ls='ls -GFh'
 alias ll="ls -ll"
 alias la="ll -a"
 
-# Set ls colors
-export LSCOLORS=ExFxBxDxCxegedabagacad 
+# Set ls colours
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Alias to set color in grep
 alias grep="grep --color=auto"
-         
-# Environment variables to set prompt format and color 
+
+# Environment variables to set prompt format and color
 export COLOR_BOLD="\[\e[1m\]"
 export COLOR_DEFAULT="\[\e[0m\]"
 
