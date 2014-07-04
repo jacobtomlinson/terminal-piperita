@@ -11,13 +11,6 @@ export COLOR_YELLOW="\[\033[33;1m\]"
 export COLOR_RED="\[\e[31m\]"
 export COLOR_BLUE="\[\033[36m\]"
 
-# Test if user is root and set user color appropriately
-if [[ $(id -u) == 0 ]]
-then
-    export PS1USERCOLOR=$COLOR_RED
-else
-    export PS1USERCOLOR=$COLOR_BLUE
-fi
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -66,15 +59,36 @@ function parse_git_dirty {
         fi
 }
 
-export PS1="\
-$PS1USERCOLOR\u\
-$COLOR_WHITE@\
-$COLOR_GREEN\h\
-$COLOR_WHITE:\
-$COLOR_YELLOW\W\
-\`if [ \$? = 0 ]; then echo -e '$COLOR_WHITE'; else echo -e '$COLOR_RED'; fi\`\
-\`if type parse_git_branch > /dev/null 2>&1; then parse_git_branch; fi\`\
-\$ $COLOR_WHITE"
+prompt_cmd () {
+    LAST_STATUS=$?
+    PS1=""
+    # Test if user is root and set user color appropriately
+    if [[ $(id -u) == 0 ]]
+    then
+        PS1+="$COLOR_RED"
+    else
+        PS1+="$COLOR_BLUE"
+    fi
+    PS1+="\u"
+    PS1+="$COLOR_WHITE@"
+    PS1+="$COLOR_GREEN\h"
+    PS1+="$COLOR_WHITE:"
+    PS1+="$COLOR_YELLOW\W"
+    # Add git branch and status if applicable
+    if type parse_git_branch > /dev/null 2>&1; then
+        PS1+=$(parse_git_branch)
+    fi
+    # Test return code and colour the $ red if fail
+    if [[ $LAST_STATUS = 0 ]]; then
+        PS1+="$COLOR_WHITE"
+    else
+        PS1+="$COLOR_RED"
+    fi
+    PS1+='\$ '
+    PS1+="$COLOR_WHITE"
+}
+
+PROMPT_COMMAND='prompt_cmd'
 
 export CLICOLOR=1
 
