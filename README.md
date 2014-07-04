@@ -48,8 +48,8 @@ Copy the contents of `Bash/.bashrc.d/piperita` into your `.bashrc` file.
 
 To do this quickly with the terminal :
 ```bash
-$ cd /where/you/downloaded/this/repository
-$ cat Bash/.bashrc.d/piperita >> ~/.bashrc
+cd /where/you/downloaded/this/repository
+cat Bash/.bashrc.d/piperita >> ~/.bashrc
 ```
 
 This will append your `.bashrc` (or create it if it doesn't exist) with the contents of this theme.
