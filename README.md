@@ -2,7 +2,7 @@
 
 The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme.
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/terminal.png "Piperita")
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.25.png "Piperita")
 
 ###Features
 * Soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/)
@@ -41,9 +41,30 @@ Usually you'll be after the `.bashrc` so for now we'll assume we're working with
 
 For more info about the different profiles and when they're used see [this stackoverflow article](http://stackoverflow.com/questions/415403/whats-the-difference-between-bashrc-bash-profile-and-environment).
 
-We'll go through two methods for installing this profile, a simple one and then a more complex one which I use.
+We'll go through one automatic and two manual methods for installing this profile, a simple one and then a more complex one which I use.
 
-####Simple
+####Automatic
+
+To automatically install piperita
+```bash
+git clone git@github.com:killfall/terminal-piperita.git
+# Or download and extract the .zip
+
+cd /path/to/this/repository
+./install.sh
+Do you want a .bashrc.d (Y/N)? y #Unless you have a good reason you should say yes
+```
+
+This script will create a ~/.bashrc.d directory (see the more complex steps for more detail). Move your original .bashrc in there if you have one.
+Then copy all the piperita files in.
+
+__Note__ - Currently the `install.sh` script installs __all__ additional config profiles. If you don't want them all follow the more complex manual steps below.
+
+This script will also be able to upgrade to future versions. Just download a later repository and run it again.
+
+####Manual
+
+#####Simple
 Copy the contents of `Bash/.bashrc.d/piperita` into your `.bashrc` file.
 
 To do this quickly with the terminal :
@@ -54,7 +75,7 @@ cat Bash/.bashrc.d/piperita >> ~/.bashrc
 
 This will append your `.bashrc` (or create it if it doesn't exist) with the contents of this theme.
 
-####More Complex
+#####More Complex
 I like to create a `.bashrc.d` directory in my home directory and place my scripts in there.
 I then have a simple `.bashrc` file which just includes all the files in that directory.
 
@@ -72,8 +93,6 @@ mv ~/.bashrc ~/.bashrc.d/original
 
 cp Bash/.bashrc ~/.
 ```
-
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/rootprompt.png "Root Prompt")
 
 ###3. Additional Profiles (Optional)
 I've also included profiles I use for additional applications. Each config file will be in a subfolder within `Additional` and will have an `INSTALL.md` file explaining what to do with it.
@@ -99,3 +118,20 @@ Open /Applications/TextEdit.app ~/.bashrc
 This is how I like my terminal. Decisions about colours, layout, fonts and features are often influenced by my current project, whatever that may be. Things will change to suit my needs, this repository is to allow me to quickly put my preferred settings on a new machine as well as share it with others.
 
 Features will come and go as I see fit, I will do my best to tag a release before making a major change to allow others to stick with a version they like. I may even make this more modular in future to allow for turning on different options.
+
+## Screenshots
+
+#####Return code testing
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.49.png "Return code")
+
+#####Escalating to root
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.24.58.png "Root")
+
+#####Grep a file
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.28.png "Grep")
+
+#####Man page
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.52.png "Man")
+
+#####Git workflow
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.33.33.png "Git")
