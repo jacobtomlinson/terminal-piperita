@@ -1,76 +1,137 @@
 #Piperita Terminal Theme
 
-The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme, based on [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/) by [Noah Frederick](http://noahfrederick.com/).
+The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme.
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/terminal.png "Piperita")
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.25.png "Piperita")
 
-__Features__
-* Soft colour scheme by Noah Frederick
+###Features
+* Soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/)
 * Prompt separated by colours
 * User identifier changes colour depending on command return code
 * Username changes colour based on whether superuser or not
 * Displays current branch and status when in a git controlled directory
 
-Themes are available for
+####Colour scheme is available for
 * Terminal.app (OS X Default)
 * [iTerm 2](http://www.iterm2.com/)
 
+####Feedback
+I __love__ feedback. Find me on twitter, [@_jacobtomlinson](https://www.twitter.com/_jacobtomlinson), and tell me what you think about piperita!
+
 ##Installation
 
-This theme comes in two parts. The first is the terminal theme which sets the default color palette, transparency, font, size and title settings of your terminal window. The second is a bash profile, this creates some aliases and sets the layout and colors for the command line itself.
+This theme comes in three parts.
+
+ 1. **Terminal theme** - this sets the default color palette, transparency, font, size and title settings of your terminal window.
+
+ 1. **Bash profile** - this creates some aliases and sets the layout and colours for the command line prompt.
+
+ 1. **Additional profiles** *(Optional)* - extra config for other applications such as `git` and `vim` to make them prettier or more usable.
+
 
 ###1. Theme
-
-####Terminal.app
-Clone the repository or download the zip and extract it on your OS X machine. Navigate to the directory for the terminal you're using and double-click the theme file to install the theme in the terminal application.
-
-####iTerm 2
-iTerm 2 is a little trickier as it doesn't have an import/export method for profiles. However you can export and import a colour scheme on its own. You will then need to configure the font, opacity and terminal size manually.
-
-To import the colour scheme download the files as above and double-click the scheme file. Then open up iTerm 2's Preferences > Profiles and add a new profile. Select the Colors menu and select Piperita from the "Load Presets..." dropdown.
-
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.12.31-1024x770.png "iTerm 2 Color Menu")
-
-Then in the text menu change to font size to 14 and the family to Monaco if not set already
-
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.13.21.png "iTerm 2 Font Menu")
-
-Finally in the windows menu move the transparency slider to around 30%, tick the blur option and set it to around 80% and then set the columns to whatever you fancy, for me on a 1680x1050 resolution screen 103 gives you half the width.
-
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.13.01.png "iTerm 2 Window Menu")
+Each supported terminal application has a subdirectory in the `Schemes` directory. See the `INSTALL.md` in each subdirectory for installation instructions.
 
 ###2. Bash Profile
-Copy the contents of `.profile` to your `.profile` or copy the whole thing if you don't have a `.profile`. The easiest way to do this is to navigate to where you downloaded the repo in your terminal and run
+For those that don't know, your bash profile is a script which runs every time you open a terminal session.
+This is used to set custom config for that session.
 
+There are a few different types of profile `.bashrc`, `.bash_profile` and `.profile` to name a few.
+Usually you'll be after the `.bashrc` so for now we'll assume we're working with that (I am).
+
+For more info about the different profiles and when they're used see [this stackoverflow article](http://stackoverflow.com/questions/415403/whats-the-difference-between-bashrc-bash-profile-and-environment).
+
+We'll go through one automatic and two manual methods for installing this profile, a simple one and then a more complex one which I use.
+
+####Automatic
+
+To automatically install piperita
+```bash
+git clone git@github.com:killfall/terminal-piperita.git
+# Or download and extract the .zip
+
+cd /path/to/this/repository
+./install.sh
+Do you want a .bashrc.d (Y/N)? y #Unless you have a good reason you should say yes
 ```
-cat .profile >> ~/.profile
+
+This script will create a ~/.bashrc.d directory (see the more complex steps for more detail). Move your original .bashrc in there if you have one.
+Then copy all the piperita files in.
+
+__Note__ - Currently the `install.sh` script installs __all__ additional config profiles. If you don't want them all follow the more complex manual steps below.
+
+This script will also be able to upgrade to future versions. Just download a later repository and run it again.
+
+####Manual
+
+#####Simple
+Copy the contents of `Bash/.bashrc.d/piperita` into your `.bashrc` file.
+
+To do this quickly with the terminal :
+```bash
+cd /where/you/downloaded/this/repository
+cat Bash/.bashrc.d/piperita >> ~/.bashrc
 ```
 
-This will append your .profile if it exists or create it if it doesn't.
+This will append your `.bashrc` (or create it if it doesn't exist) with the contents of this theme.
 
-__What does .profile do?__
+#####More Complex
+I like to create a `.bashrc.d` directory in my home directory and place my scripts in there.
+I then have a simple `.bashrc` file which just includes all the files in that directory.
 
-So you may be asking what your `.profile` does. Well your `.profile`, along with other files such as `.bashrc` and `.bash_profile` depending on your operating system, are scripts which are run when you open a terminal or tty. They are used to define some variables and aliases to make life easier without having to define them every time.
+This way I can have specific aliases for different projects or environments in their own file without having to modify my `.bashrc` or the `piperita` theme.
+I just create a new file in `.bashrc.d` and put my extra config in there.
 
-If you have a look at the `.profile` included in this theme you will see some aliases to ls, the first being ls itself but with a couple of options which tells it to use color mode. There are more aliases for `ls` such as `ll` or `la` which are just shortcuts for `ls -l` and `ls -la` respectively. There are also some variables set which define colors to be used.
 
-The main part of this `.profile` which defines the theme is the definition of the variable `PS1` which is the format and colors for the prompt itself. The two main things which adds functionality are the if statements which change colors in the prompt based on what is happening. One checks to see if the pervious command failed and if so it changes the prompt's last character (usually a $) to be red. The other checks to see if the user is root, you really should avoid using the root user as it has a lot of power and you can easily mess things up, however sometimes you need to use the root user so the prompt changes the username to red if you're root just to make you extra aware you're in a risky position.
+```bash
+cd /where/you/downloaded/this/reposirtory
+cp -R Bash/.bashrc.d ~/.
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/rootprompt.png "Root Prompt")
+# If you already have a .bashrc file do this next step, if not don't worry.
+# This will move your existing .bashrc into .bashrc.d and name it `original`
+mv ~/.bashrc ~/.bashrc.d/original
 
-###3. Vim Profile (Optional)
-I've also included a vim profie `.vimrc`. This is just a config file to set some default behaviour for the command line text editor vim. Currently this just tells vim to use syntax highlighting. You may install it with the command.
-
+cp Bash/.bashrc ~/.
 ```
-cat .vimrc >> ~/.vimrc
+
+###3. Additional Profiles (Optional)
+I've also included profiles I use for additional applications. Each config file will be in a subfolder within `Additional` and will have an `INSTALL.md` file explaining what to do with it.
+However most will just require you to copy the config file into your home directory or into `.bashrc.d`.
+
+#### Example - vim
+```bash
+cd /where/you/downloaded/this/reposirtory
+cat Additional/vim/.vimrc >> ~/.vimrc
 ```
 
 ##Uninstallation
 
-To remove Piperita first navigate to Preferences in the terminal application and remove the theme using the minus button. Then edit your `.profile` and remove the block starting `### Start Piperita Theme ###` and ending `### End Piperita Theme ###`.
+Edit your `.bashrc`, `.vimrc` and any other config files you've used and remove the block starting `### Start Piperita Theme ###` and ending `### End Piperita Theme ###`.
 
-__Tip__: You can quickly edit your `.profile` in Text Edit using the command
+__Tip__: You can quickly edit your `.bashrc` in Text Edit using the command
 
+```bash
+Open /Applications/TextEdit.app ~/.bashrc
 ```
-Open /Applications/TextEdit.app ~/.profile
-```
+
+## Disclaimer
+This is how I like my terminal. Decisions about colours, layout, fonts and features are often influenced by my current project, whatever that may be. Things will change to suit my needs, this repository is to allow me to quickly put my preferred settings on a new machine as well as share it with others.
+
+Features will come and go as I see fit, I will do my best to tag a release before making a major change to allow others to stick with a version they like. I may even make this more modular in future to allow for turning on different options.
+
+## Screenshots
+
+#####Return code testing
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.49.png "Return code")
+
+#####Escalating to root
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.24.58.png "Root")
+
+#####Grep a file
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.28.png "Grep")
+
+#####Man page
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.52.png "Man")
+
+#####Git workflow
+![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.33.33.png "Git")
