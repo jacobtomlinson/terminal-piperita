@@ -35,6 +35,18 @@ if [ -e "$DIR/Bash/.bashrc.d/piperita" ]; then
     else
       echo "Cannot find new .bashrc, install unsuccessful"
     fi
+    if [ -e ~/.bash_profile ]; then
+      if [[ -n $(sed  '/## Piperita Theme ##/,/## End Piperita Theme ##/d' ~/.bash_profile) ]]; then
+        sed  '/## Piperita Theme ##/,/## End Piperita Theme ##/d' ~/.bash_profile >> ~/.bashrc.d/original
+        echo "Your original ~/.bash_profile has been moved to ~/.bashrc.d/original"
+      fi
+    fi
+    if [ -e "$DIR/Bash/.bash_profile" ]; then
+      cp "$DIR/Bash/.bash_profile" ~/.bash_profile
+      echo "New .bash_profile installed"
+    else
+      echo "Cannot find new .bash_profile, install unsuccessful"
+    fi
     cp "$DIR/Bash/.bashrc.d/piperita" ~/.bashrc.d/piperita && echo "Piperita base installed"
   else
     cat "$DIR/Bash/.bashrc.d/piperita" >> ~/.bashrc
