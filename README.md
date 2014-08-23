@@ -2,7 +2,7 @@
 
 The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme.
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.25.png "Piperita")
+![alt text](http://i.imgur.com/4gW1lZi.png "Piperita")
 
 ###Features
 * Soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/)
@@ -122,16 +122,16 @@ Features will come and go as I see fit, I will do my best to tag a release befor
 ## Screenshots
 
 #####Return code testing
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.23.49.png "Return code")
+![alt text](http://i.imgur.com/YJMQuka.png "Return code")
 
 #####Escalating to root
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.24.58.png "Root")
+![alt text](http://i.imgur.com/2xOQVIw.png "Root")
 
 #####Grep a file
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.28.png "Grep")
+![alt text](http://i.imgur.com/yTHVbY3.png "Grep")
 
 #####Man page
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.26.52.png "Man")
+![alt text](http://i.imgur.com/Qb2oJUu.png "Man")
 
 #####Git workflow
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2014/07/Screen-Shot-2014-07-04-at-12.33.33.png "Git")
+![alt text](http://i.imgur.com/GLSwK3y.png "Git")
