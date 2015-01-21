@@ -2,7 +2,7 @@
 
 ###Boxen
 
-Piperita for iTerm 2 is included in the official boxen module [puppet-iterm2][1]. 
+Piperita for iTerm 2 is included in the official [boxen][2] module [puppet-iterm2][1]. 
 
 To install with boxen simply include iTerm 2 and then include the piperita scheme.
 
@@ -37,3 +37,4 @@ iTerm 2 doesn't have an import/export method for whole profiles. However you can
   * *Note* - For me on a 1680x1050 resolution screen 103 gives you half the width.
 
 [1]:https://github.com/boxen/puppet-iterm2
+[2]:https://boxen.github.com/
