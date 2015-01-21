@@ -23,6 +23,8 @@ Then follow the installation instructions from [my dotfiles][1] if you want thos
 
 ####Screenshots
 
+Screenshots using [my dotfiles][1] and this theme.
+
 #####Return code testing
 ![alt text](http://i.imgur.com/6fr0gB1.png "Return code")
 
