@@ -23,7 +23,7 @@ Then follow the installation instructions from [my dotfiles][1] if you want thos
 
 ####Screenshots
 
-Screenshots using [my dotfiles][1] and this theme.
+Screenshots using [my dotfiles][1] and this theme in [iTerm2][2].
 
 #####Return code testing
 ![alt text](http://i.imgur.com/6fr0gB1.png "Return code")
@@ -41,3 +41,4 @@ Screenshots using [my dotfiles][1] and this theme.
 ![alt text](http://i.imgur.com/0rr9Ulz.png "Git")
 
 [1]: https://github.com/jacobtomlinson/dotfiles
+[2]: http://iterm2.com/
