@@ -1,7 +1,21 @@
 ##Install for iTerm 2
+
+###Boxen
+
+Piperita for iTerm 2 is included in the official boxen module [puppet-iterm2][1]. 
+
+To install with boxen simply include iTerm 2 and then include the piperita scheme.
+
+```
+include iterm2::stable
+include iterm2::colors::piperita
+```
+
+###Manual
+
 iTerm 2 doesn't have an import/export method for whole profiles. However you can export and import a colour scheme on its own. You will then need to configure the font, opacity and terminal size manually.
 
-###Colour scheme
+####Colour scheme
  * Download the files if you haven't already
  * Double-click the `Piperita.itermcolors` file to import the colour scheme
  * Open up iTerm 2's `Preferences > Profiles`
@@ -9,16 +23,12 @@ iTerm 2 doesn't have an import/export method for whole profiles. However you can
  * Select the Colors menu
  * Select Piperita from the `Load Presets...` dropdown
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.12.31-1024x770.png "iTerm 2 Color Menu")
-
-###Font
+####Font
  * Open the text menu
  * Set the font size to `14`
  * Set the family to `Monaco` (if not set already)
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.13.21.png "iTerm 2 Font Menu")
-
-###Transparency/Blur
+####Transparency/Blur
  * Open the window menu
  * Set the transparency slider to around `30%`
  * Tick the blur option
@@ -26,4 +36,4 @@ iTerm 2 doesn't have an import/export method for whole profiles. However you can
  * Set the columns to whatever you fancy
   * *Note* - For me on a 1680x1050 resolution screen 103 gives you half the width.
 
-![alt text](http://www.jacobtomlinson.co.uk/wp-content/uploads/2013/10/Screen-Shot-2013-10-17-at-18.13.01.png "iTerm 2 Window Menu")
+[1]:https://github.com/boxen/puppet-iterm2
