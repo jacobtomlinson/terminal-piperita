@@ -17,7 +17,7 @@ This theme is designed to be used in conjunction with [my dotfiles][1]. Original
 I __love__ feedback. Find me on twitter, [@_jacobtomlinson](https://www.twitter.com/_jacobtomlinson), and tell me what you think about piperita!
 
 ###Installation
-Each supported terminal application has a subdirectory in the `schemes` directory. See the `INSTALL.md` in each subdirectory for installation instructions.
+Each supported terminal application has a subdirectory in the `schemes` directory. See the `README.md` in each subdirectory for installation instructions.
 
 Then follow the installation instructions from [my dotfiles][1] if you want those too!
 
