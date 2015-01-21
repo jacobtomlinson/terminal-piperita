@@ -2,7 +2,7 @@
 
 The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-theme-piperita/) terminal theme.
 
-![alt text](http://i.imgur.com/4gW1lZi.png "Piperita")
+![alt text](http://i.imgur.com/XHmCIzR.png "Piperita")
 
 A modified version of the soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/).
 
@@ -24,18 +24,18 @@ Then follow the installation instructions from [my dotfiles][1] if you want thos
 ####Screenshots
 
 #####Return code testing
-![alt text](http://i.imgur.com/YJMQuka.png "Return code")
+![alt text](http://i.imgur.com/6fr0gB1.png "Return code")
 
 #####Escalating to root
-![alt text](http://i.imgur.com/2xOQVIw.png "Root")
+![alt text](http://i.imgur.com/Ag6zNRd.png "Root")
 
 #####Grep a file
-![alt text](http://i.imgur.com/yTHVbY3.png "Grep")
+![alt text](http://i.imgur.com/XO5JAwB.png "Grep")
 
 #####Man page
-![alt text](http://i.imgur.com/Qb2oJUu.png "Man")
+![alt text](http://i.imgur.com/gOudKTc.png "Man")
 
 #####Git workflow
-![alt text](http://i.imgur.com/GLSwK3y.png "Git")
+![alt text](http://i.imgur.com/0rr9Ulz.png "Git")
 
 [1]: https://github.com/jacobtomlinson/dotfiles
