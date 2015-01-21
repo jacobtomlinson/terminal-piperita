@@ -4,7 +4,7 @@ The [Piperita](http://www.jacobtomlinson.co.uk/2013/10/17/mac-os-x-terminal-them
 
 ![alt text](http://i.imgur.com/4gW1lZi.png "Piperita")
 
-A modified version of the soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/)
+A modified version of the soft colour scheme by [Noah Frederick](http://noahfrederick.com/) called [Peppermint](http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/).
 
 ####Dotfiles
 This theme is designed to be used in conjunction with [my dotfiles][1]. Originally they were part of the same repository but to clean things up I decided to separate them.
@@ -20,6 +20,8 @@ I __love__ feedback. Find me on twitter, [@_jacobtomlinson](https://www.twitter.
 Each supported terminal application has a subdirectory in the `schemes` directory. See the `INSTALL.md` in each subdirectory for installation instructions.
 
 Then follow the installation instructions from [my dotfiles][1] if you want those too!
+
+####Screenshots
 
 #####Return code testing
 ![alt text](http://i.imgur.com/YJMQuka.png "Return code")
