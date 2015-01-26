@@ -2,14 +2,16 @@
 
 ###Boxen
 
-Piperita for iTerm 2 is included in the official [boxen][2] module [puppet-iterm2][1]. 
+The piperita colour scheme for iTerm 2 is included in the official [boxen][2] module [puppet-iterm2][1]. 
 
-To install with boxen simply include iTerm 2 and then include the piperita scheme.
+To install with boxen simply include iTerm 2 and then include the piperita colour scheme.
 
 ```
 include iterm2::stable
 include iterm2::colors::piperita
 ```
+
+But you'll still need to set the font and transparency/blur manually. See below for details.
 
 ###Manual
 
