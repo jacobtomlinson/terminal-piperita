@@ -1,0 +1,6 @@
+  [[piperita]]
+    foreground_color = "#e6e6e6"
+    palette = "#3b3b3b:#fc4c72:#98ea95:#fed65f:#4fb9f2:#fc72ff:#76c8ce:#d3d3d3:#606060:#fd94ac:#bae8b9:#f8fa95:#7dd2ff:#fd94ff:#a3eeec:#ffffff"
+    font = Monaco Bold 10
+    use_system_font = False
+    background_image = None

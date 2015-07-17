@@ -12,6 +12,7 @@ This theme is designed to be used in conjunction with [my dotfiles][1]. Original
 ####Colour scheme is available for
 * Terminal.app (OS X Default)
 * [iTerm 2](http://www.iterm2.com/)
+* [terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html)
 
 ####Feedback
 I __love__ feedback. Find me on twitter, [@_jacobtomlinson](https://www.twitter.com/_jacobtomlinson), and tell me what you think about piperita!
