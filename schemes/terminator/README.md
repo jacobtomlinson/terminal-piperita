@@ -10,7 +10,7 @@ Follow the instructions at https://github.com/cstrap/monaco-font.
 # vi ~/.config/terminator/config
 ```
 
-Copy the contents of `[config](config)` into the `[profiles]` section below `[[default]]`.
+Copy the contents of [config](config) into the `[profiles]` section below `[[default]]`.
 
 For more information run
 ```
