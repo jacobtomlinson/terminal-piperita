@@ -1,6 +1,6 @@
-##Install for iTerm 2
+## Install for iTerm 2
 
-###Boxen
+### Boxen
 
 The piperita colour scheme for iTerm 2 is included in the official [boxen][2] module [puppet-iterm2][1]. 
 
@@ -13,11 +13,11 @@ include iterm2::colors::piperita
 
 But you'll still need to set the font and transparency/blur manually. See below for details.
 
-###Manual
+### Manual
 
 iTerm 2 doesn't have an import/export method for whole profiles. However you can export and import a colour scheme on its own. You will then need to configure the font, opacity and terminal size manually.
 
-####Colour scheme
+#### Colour scheme
  * Download the files if you haven't already
  * Double-click the `Piperita.itermcolors` file to import the colour scheme
  * Open up iTerm 2's `Preferences > Profiles`
@@ -25,12 +25,12 @@ iTerm 2 doesn't have an import/export method for whole profiles. However you can
  * Select the Colors menu
  * Select Piperita from the `Load Presets...` dropdown
 
-####Font
+#### Font
  * Open the text menu
  * Set the font size to `14`
  * Set the family to `Monaco` (if not set already)
 
-####Transparency/Blur
+#### Transparency/Blur
  * Open the window menu
  * Set the transparency slider to around `30%`
  * Tick the blur option
